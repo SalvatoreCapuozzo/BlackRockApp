@@ -1,0 +1,460 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6E36FA8827BD67D39B33D178 /* Pods_BlackRockApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ADBED53F7CB71DD91D1DAFA /* Pods_BlackRockApp.framework */; };
+		87A4812D247D1E86007D4400 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A4812C247D1E86007D4400 /* AppDelegate.swift */; };
+		87A4812F247D1E86007D4400 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A4812E247D1E86007D4400 /* SceneDelegate.swift */; };
+		87A48131247D1E86007D4400 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A48130247D1E86007D4400 /* ViewController.swift */; };
+		87A48134247D1E86007D4400 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87A48132247D1E86007D4400 /* Main.storyboard */; };
+		87A48137247D1E86007D4400 /* BlackRockApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 87A48135247D1E86007D4400 /* BlackRockApp.xcdatamodeld */; };
+		87A48139247D1E99007D4400 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87A48138247D1E99007D4400 /* Assets.xcassets */; };
+		87A4813C247D1E99007D4400 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87A4813A247D1E99007D4400 /* LaunchScreen.storyboard */; };
+		87A48153247D2DA9007D4400 /* CSVHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A48152247D2DA9007D4400 /* CSVHandler.swift */; };
+		87A48155247D35E3007D4400 /* LatitudeZone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A48154247D35E3007D4400 /* LatitudeZone.swift */; };
+		87A48157247D3C33007D4400 /* ZonAnn.Ts+dSST.csv in Resources */ = {isa = PBXBuildFile; fileRef = 87A48156247D3C33007D4400 /* ZonAnn.Ts+dSST.csv */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3ADBED53F7CB71DD91D1DAFA /* Pods_BlackRockApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlackRockApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		59503BDEA242967DD26EBD2E /* Pods-BlackRockApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlackRockApp.debug.xcconfig"; path = "Target Support Files/Pods-BlackRockApp/Pods-BlackRockApp.debug.xcconfig"; sourceTree = "<group>"; };
+		87A48129247D1E86007D4400 /* BlackRockApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlackRockApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		87A4812C247D1E86007D4400 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		87A4812E247D1E86007D4400 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		87A48130247D1E86007D4400 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		87A48133247D1E86007D4400 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		87A48136247D1E86007D4400 /* BlackRockApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BlackRockApp.xcdatamodel; sourceTree = "<group>"; };
+		87A48138247D1E99007D4400 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		87A4813B247D1E99007D4400 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		87A4813D247D1E99007D4400 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87A48152247D2DA9007D4400 /* CSVHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVHandler.swift; sourceTree = "<group>"; };
+		87A48154247D35E3007D4400 /* LatitudeZone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatitudeZone.swift; sourceTree = "<group>"; };
+		87A48156247D3C33007D4400 /* ZonAnn.Ts+dSST.csv */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ZonAnn.Ts+dSST.csv"; sourceTree = SOURCE_ROOT; };
+		CF656795AA9EBF8F1D176BB7 /* Pods-BlackRockApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlackRockApp.release.xcconfig"; path = "Target Support Files/Pods-BlackRockApp/Pods-BlackRockApp.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		87A48126247D1E86007D4400 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E36FA8827BD67D39B33D178 /* Pods_BlackRockApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		16850533AF36BAFB1388A511 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				59503BDEA242967DD26EBD2E /* Pods-BlackRockApp.debug.xcconfig */,
+				CF656795AA9EBF8F1D176BB7 /* Pods-BlackRockApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		87A48120247D1E86007D4400 = {
+			isa = PBXGroup;
+			children = (
+				87A4812B247D1E86007D4400 /* BlackRockApp */,
+				87A4812A247D1E86007D4400 /* Products */,
+				16850533AF36BAFB1388A511 /* Pods */,
+				A3E3A94ACEEF0657D643A53B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		87A4812A247D1E86007D4400 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				87A48129247D1E86007D4400 /* BlackRockApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		87A4812B247D1E86007D4400 /* BlackRockApp */ = {
+			isa = PBXGroup;
+			children = (
+				87A48156247D3C33007D4400 /* ZonAnn.Ts+dSST.csv */,
+				87A4812C247D1E86007D4400 /* AppDelegate.swift */,
+				87A4812E247D1E86007D4400 /* SceneDelegate.swift */,
+				87A48152247D2DA9007D4400 /* CSVHandler.swift */,
+				87A48154247D35E3007D4400 /* LatitudeZone.swift */,
+				87A48130247D1E86007D4400 /* ViewController.swift */,
+				87A48132247D1E86007D4400 /* Main.storyboard */,
+				87A48138247D1E99007D4400 /* Assets.xcassets */,
+				87A4813A247D1E99007D4400 /* LaunchScreen.storyboard */,
+				87A4813D247D1E99007D4400 /* Info.plist */,
+				87A48135247D1E86007D4400 /* BlackRockApp.xcdatamodeld */,
+			);
+			path = BlackRockApp;
+			sourceTree = "<group>";
+		};
+		A3E3A94ACEEF0657D643A53B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3ADBED53F7CB71DD91D1DAFA /* Pods_BlackRockApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		87A48128247D1E86007D4400 /* BlackRockApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 87A48140247D1E99007D4400 /* Build configuration list for PBXNativeTarget "BlackRockApp" */;
+			buildPhases = (
+				EB3E020A8636CCC92F55D6CC /* [CP] Check Pods Manifest.lock */,
+				87A48125247D1E86007D4400 /* Sources */,
+				87A48126247D1E86007D4400 /* Frameworks */,
+				87A48127247D1E86007D4400 /* Resources */,
+				B3B10F561EAC8893ADC9FEF8 /* [CP] Embed Pods Frameworks */,
+				D5EC26AB009EA5E9FEC9964E /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BlackRockApp;
+			productName = BlackRockApp;
+			productReference = 87A48129247D1E86007D4400 /* BlackRockApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		87A48121247D1E86007D4400 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1150;
+				LastUpgradeCheck = 1150;
+				ORGANIZATIONNAME = "Salvatore Capuozzo";
+				TargetAttributes = {
+					87A48128247D1E86007D4400 = {
+						CreatedOnToolsVersion = 11.5;
+					};
+				};
+			};
+			buildConfigurationList = 87A48124247D1E86007D4400 /* Build configuration list for PBXProject "BlackRockApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 87A48120247D1E86007D4400;
+			productRefGroup = 87A4812A247D1E86007D4400 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				87A48128247D1E86007D4400 /* BlackRockApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		87A48127247D1E86007D4400 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87A4813C247D1E99007D4400 /* LaunchScreen.storyboard in Resources */,
+				87A48139247D1E99007D4400 /* Assets.xcassets in Resources */,
+				87A48157247D3C33007D4400 /* ZonAnn.Ts+dSST.csv in Resources */,
+				87A48134247D1E86007D4400 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B3B10F561EAC8893ADC9FEF8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BlackRockApp/Pods-BlackRockApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BlackRockApp/Pods-BlackRockApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BlackRockApp/Pods-BlackRockApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D5EC26AB009EA5E9FEC9964E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BlackRockApp/Pods-BlackRockApp-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BlackRockApp/Pods-BlackRockApp-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BlackRockApp/Pods-BlackRockApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EB3E020A8636CCC92F55D6CC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BlackRockApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		87A48125247D1E86007D4400 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87A48155247D35E3007D4400 /* LatitudeZone.swift in Sources */,
+				87A48131247D1E86007D4400 /* ViewController.swift in Sources */,
+				87A4812D247D1E86007D4400 /* AppDelegate.swift in Sources */,
+				87A48153247D2DA9007D4400 /* CSVHandler.swift in Sources */,
+				87A48137247D1E86007D4400 /* BlackRockApp.xcdatamodeld in Sources */,
+				87A4812F247D1E86007D4400 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		87A48132247D1E86007D4400 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				87A48133247D1E86007D4400 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		87A4813A247D1E99007D4400 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				87A4813B247D1E99007D4400 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		87A4813E247D1E99007D4400 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		87A4813F247D1E99007D4400 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		87A48141247D1E99007D4400 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59503BDEA242967DD26EBD2E /* Pods-BlackRockApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 84543EX3ME;
+				INFOPLIST_FILE = BlackRockApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.salvatorecapuozzo.BlackRockApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		87A48142247D1E99007D4400 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF656795AA9EBF8F1D176BB7 /* Pods-BlackRockApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 84543EX3ME;
+				INFOPLIST_FILE = BlackRockApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.salvatorecapuozzo.BlackRockApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		87A48124247D1E86007D4400 /* Build configuration list for PBXProject "BlackRockApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				87A4813E247D1E99007D4400 /* Debug */,
+				87A4813F247D1E99007D4400 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		87A48140247D1E99007D4400 /* Build configuration list for PBXNativeTarget "BlackRockApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				87A48141247D1E99007D4400 /* Debug */,
+				87A48142247D1E99007D4400 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		87A48135247D1E86007D4400 /* BlackRockApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				87A48136247D1E86007D4400 /* BlackRockApp.xcdatamodel */,
+			);
+			currentVersion = 87A48136247D1E86007D4400 /* BlackRockApp.xcdatamodel */;
+			path = BlackRockApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 87A48121247D1E86007D4400 /* Project object */;
+}
