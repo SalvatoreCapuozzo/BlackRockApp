@@ -25,7 +25,30 @@ enum LatitudeZone {
     case zone64S44S
     case zone90S64S
     
-    func getCoordsAndWeight(from zone: LatitudeZone) -> (CLLocation, Float) {
+    static func getZone(from index: Int) -> LatitudeZone {
+        switch index {
+        case 0:
+            return zone64N90N
+        case 1:
+            return zone44N64N
+        case 2:
+            return zone24N44N
+        case 3:
+            return zoneEQU24N
+        case 4:
+            return zone24SEQU
+        case 5:
+            return zone44S24S
+        case 6:
+            return zone64S44S
+        case 7:
+            return zone90S64S
+        default:
+            return zoneGlob
+        }
+    }
+    
+    func getCoordsAndWeight() -> (CLLocation, Float) {
         switch self {
         case .zoneGlob:
             return (CLLocation(latitude: 0, longitude: 0), 4.0)
@@ -40,7 +63,7 @@ enum LatitudeZone {
         case .zone90S24S:
             return (CLLocation(latitude: -54, longitude: 0), 2.0)
         case .zone64N90N:
-            return (CLLocation(latitude: 77, longitude: 0), 1.0)
+            return (CLLocation(latitude: 77, longitude: 00), 1.0)
         case .zone44N64N:
             return (CLLocation(latitude: 54, longitude: 0), 1.0)
         case .zone24N44N:

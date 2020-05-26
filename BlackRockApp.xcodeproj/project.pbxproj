@@ -18,6 +18,7 @@
 		87A48153247D2DA9007D4400 /* CSVHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A48152247D2DA9007D4400 /* CSVHandler.swift */; };
 		87A48155247D35E3007D4400 /* LatitudeZone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A48154247D35E3007D4400 /* LatitudeZone.swift */; };
 		87A48157247D3C33007D4400 /* ZonAnn.Ts+dSST.csv in Resources */ = {isa = PBXBuildFile; fileRef = 87A48156247D3C33007D4400 /* ZonAnn.Ts+dSST.csv */; };
+		87DBACED247D59B80002977E /* GlobalLandTemperaturesByCountry.csv in Resources */ = {isa = PBXBuildFile; fileRef = 87DBACEC247D59B70002977E /* GlobalLandTemperaturesByCountry.csv */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,7 +35,8 @@
 		87A4813D247D1E99007D4400 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		87A48152247D2DA9007D4400 /* CSVHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVHandler.swift; sourceTree = "<group>"; };
 		87A48154247D35E3007D4400 /* LatitudeZone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatitudeZone.swift; sourceTree = "<group>"; };
-		87A48156247D3C33007D4400 /* ZonAnn.Ts+dSST.csv */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ZonAnn.Ts+dSST.csv"; sourceTree = SOURCE_ROOT; };
+		87A48156247D3C33007D4400 /* ZonAnn.Ts+dSST.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = "ZonAnn.Ts+dSST.csv"; sourceTree = SOURCE_ROOT; };
+		87DBACEC247D59B70002977E /* GlobalLandTemperaturesByCountry.csv */ = {isa = PBXFileReference; lastKnownFileType = text; name = GlobalLandTemperaturesByCountry.csv; path = "climate-change-earth-surface-temperature-data/GlobalLandTemperaturesByCountry.csv"; sourceTree = SOURCE_ROOT; };
 		CF656795AA9EBF8F1D176BB7 /* Pods-BlackRockApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlackRockApp.release.xcconfig"; path = "Target Support Files/Pods-BlackRockApp/Pods-BlackRockApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,6 +82,7 @@
 		87A4812B247D1E86007D4400 /* BlackRockApp */ = {
 			isa = PBXGroup;
 			children = (
+				87DBACEC247D59B70002977E /* GlobalLandTemperaturesByCountry.csv */,
 				87A48156247D3C33007D4400 /* ZonAnn.Ts+dSST.csv */,
 				87A4812C247D1E86007D4400 /* AppDelegate.swift */,
 				87A4812E247D1E86007D4400 /* SceneDelegate.swift */,
@@ -168,6 +171,7 @@
 				87A48139247D1E99007D4400 /* Assets.xcassets in Resources */,
 				87A48157247D3C33007D4400 /* ZonAnn.Ts+dSST.csv in Resources */,
 				87A48134247D1E86007D4400 /* Main.storyboard in Resources */,
+				87DBACED247D59B80002977E /* GlobalLandTemperaturesByCountry.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,6 +394,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 84543EX3ME;
 				INFOPLIST_FILE = BlackRockApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -409,6 +414,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 84543EX3ME;
 				INFOPLIST_FILE = BlackRockApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
