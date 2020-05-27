@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		6E36FA8827BD67D39B33D178 /* Pods_BlackRockApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ADBED53F7CB71DD91D1DAFA /* Pods_BlackRockApp.framework */; };
+		878CC4A9247DD2FD0044DDF5 /* 90toNow.csv in Resources */ = {isa = PBXBuildFile; fileRef = 878CC4A8247DD2FC0044DDF5 /* 90toNow.csv */; };
+		878CC4AB247DE2090044DDF5 /* style.json in Resources */ = {isa = PBXBuildFile; fileRef = 878CC4AA247DE2090044DDF5 /* style.json */; };
+		878CC4AD247DE4180044DDF5 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878CC4AC247DE4180044DDF5 /* ActivityView.swift */; };
 		87A4812D247D1E86007D4400 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A4812C247D1E86007D4400 /* AppDelegate.swift */; };
 		87A4812F247D1E86007D4400 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A4812E247D1E86007D4400 /* SceneDelegate.swift */; };
 		87A48131247D1E86007D4400 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A48130247D1E86007D4400 /* ViewController.swift */; };
@@ -24,6 +27,9 @@
 /* Begin PBXFileReference section */
 		3ADBED53F7CB71DD91D1DAFA /* Pods_BlackRockApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlackRockApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		59503BDEA242967DD26EBD2E /* Pods-BlackRockApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlackRockApp.debug.xcconfig"; path = "Target Support Files/Pods-BlackRockApp/Pods-BlackRockApp.debug.xcconfig"; sourceTree = "<group>"; };
+		878CC4A8247DD2FC0044DDF5 /* 90toNow.csv */ = {isa = PBXFileReference; lastKnownFileType = file; path = 90toNow.csv; sourceTree = SOURCE_ROOT; };
+		878CC4AA247DE2090044DDF5 /* style.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = style.json; sourceTree = "<group>"; };
+		878CC4AC247DE4180044DDF5 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		87A48129247D1E86007D4400 /* BlackRockApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlackRockApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87A4812C247D1E86007D4400 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		87A4812E247D1E86007D4400 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,13 +88,16 @@
 		87A4812B247D1E86007D4400 /* BlackRockApp */ = {
 			isa = PBXGroup;
 			children = (
+				878CC4A8247DD2FC0044DDF5 /* 90toNow.csv */,
 				87DBACEC247D59B70002977E /* GlobalLandTemperaturesByCountry.csv */,
 				87A48156247D3C33007D4400 /* ZonAnn.Ts+dSST.csv */,
 				87A4812C247D1E86007D4400 /* AppDelegate.swift */,
 				87A4812E247D1E86007D4400 /* SceneDelegate.swift */,
 				87A48152247D2DA9007D4400 /* CSVHandler.swift */,
 				87A48154247D35E3007D4400 /* LatitudeZone.swift */,
+				878CC4AC247DE4180044DDF5 /* ActivityView.swift */,
 				87A48130247D1E86007D4400 /* ViewController.swift */,
+				878CC4AA247DE2090044DDF5 /* style.json */,
 				87A48132247D1E86007D4400 /* Main.storyboard */,
 				87A48138247D1E99007D4400 /* Assets.xcassets */,
 				87A4813A247D1E99007D4400 /* LaunchScreen.storyboard */,
@@ -168,9 +177,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				87A4813C247D1E99007D4400 /* LaunchScreen.storyboard in Resources */,
+				878CC4A9247DD2FD0044DDF5 /* 90toNow.csv in Resources */,
 				87A48139247D1E99007D4400 /* Assets.xcassets in Resources */,
 				87A48157247D3C33007D4400 /* ZonAnn.Ts+dSST.csv in Resources */,
 				87A48134247D1E86007D4400 /* Main.storyboard in Resources */,
+				878CC4AB247DE2090044DDF5 /* style.json in Resources */,
 				87DBACED247D59B80002977E /* GlobalLandTemperaturesByCountry.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -245,6 +256,7 @@
 				87A48131247D1E86007D4400 /* ViewController.swift in Sources */,
 				87A4812D247D1E86007D4400 /* AppDelegate.swift in Sources */,
 				87A48153247D2DA9007D4400 /* CSVHandler.swift in Sources */,
+				878CC4AD247DE4180044DDF5 /* ActivityView.swift in Sources */,
 				87A48137247D1E86007D4400 /* BlackRockApp.xcdatamodeld in Sources */,
 				87A4812F247D1E86007D4400 /* SceneDelegate.swift in Sources */,
 			);
@@ -394,7 +406,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 84543EX3ME;
 				INFOPLIST_FILE = BlackRockApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -414,7 +426,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 84543EX3ME;
 				INFOPLIST_FILE = BlackRockApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

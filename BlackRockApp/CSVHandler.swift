@@ -27,6 +27,7 @@ class CSVHandler {
 
     class func cleanRows(file:String)->String{
         var cleanFile = file
+        cleanFile = cleanFile.replacingOccurrences(of: "\'", with: "'")
         cleanFile = cleanFile.replacingOccurrences(of: "\r", with: "\n")
         cleanFile = cleanFile.replacingOccurrences(of: "\n\n", with: "\n")
         //        cleanFile = cleanFile.replacingOccurrences(of: ";;", with: "")
