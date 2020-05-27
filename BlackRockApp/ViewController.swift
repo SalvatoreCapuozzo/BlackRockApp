@@ -22,7 +22,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     var locmanager = CLLocationManager()
 
     var list = [GMUWeightedLatLng]()
-    var currentPlace = "Morocco"
+    var currentPlace = ["Morocco", "Algeria", "Libya"]
     private var heatmapLayer: GMUHeatmapTileLayer!
     private var gradientColors = [UIColor.blue, UIColor.cyan, UIColor.white, UIColor.yellow,  UIColor.red]
     private var gradientStartPoints = [0.2, 0.4, 0.6, 0.8, 1.0] as [NSNumber]
@@ -39,9 +39,9 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         self.backView.layer.cornerRadius = 20
         self.backView.layer.masksToBounds = true
         self.dateSlider.isContinuous = false
-        self.dateLabel.text = "Jun 2003"
+        self.dateLabel.text = "6-2003"
         map = GMSMapView(frame: CGRect(x: self.backView.frame.origin.x, y: 160, width: self.backView.frame.size.width, height: view.frame.size.height/2))
-        let camera = GMSCameraPosition.camera(withLatitude: 34.0, longitude: -7.0, zoom: 5.0)
+        let camera = GMSCameraPosition.camera(withLatitude: 34.0, longitude: 5.0, zoom: 4.0)
         map = GMSMapView.map(withFrame: map.frame, camera: camera)
         if let styleURL = Bundle.main.url(forResource: "style", withExtension: "json") {
             do {
@@ -56,22 +56,35 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         self.backView.addSubview(map)
         heatmapLayer.map = map
         
-        self.titleLabel.text = "Temperature in Morocco"
-        self.addHeatmap(from: "90toNow", withExt: "csv", country: "Morocco", year: 2003)
+        self.titleLabel.text = "Temperature in Baghred"
+        self.addHeatmap(from: "90toNow", withExt: "csv", countries: ["Morocco", "Algeria", "Libya"], year: 2003, month: 6)
         
         self.view.addSubview(map)
         // Do any additional setup after loading the view.
     }
     
-    func addHeatmap(from csvName: String, withExt: String, country: String, year: Int) {
+    func addHeatmap(from csvName: String, withExt: String, countries: [String], year: Int, month: Int) {
         var data = CSVHandler.readDataFromCSV(fileName: csvName, fileType: withExt)
         data = CSVHandler.cleanRows(file: data!)
         let csvRows = CSVHandler.csv(data: data!)
 
         var chosenMonth: Dictionary<String,(Double,CLLocationCoordinate2D)> = [:]
+        var chosenArray: [Dictionary<String,(Double,CLLocationCoordinate2D)>] = [[:]]
         for i in 1..<csvRows.count-1 {
             let date = csvRows[i][0]
-            if date == "\(year)-06-01" && csvRows[i][3] == country {
+            var trueCondition = false
+            for country in countries {
+                if csvRows[i][3] == country {
+                    trueCondition = true
+                }
+            }
+            var monthString = ""
+            if month<10 {
+                monthString = "0\(month)"
+            } else {
+                monthString = "\(month)"
+            }
+            if date == "\(year)-\(monthString)-01" && trueCondition {
                 var averAndLoc: (Double,CLLocationCoordinate2D)
                 
                 var lat = csvRows[i][4]
@@ -129,13 +142,14 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     @IBAction func sliderValueChanged(_ sender: UISlider) {
         let currentValue = Int(sender.value)
         
-        let year = 1990 + currentValue
-        dateLabel.text = "Jun \(year)"
+        let year = 1990 + currentValue/12
+        let month = currentValue%12
+        dateLabel.text = "\(month+1)-\(year)"
         DispatchQueue.main.async {
             ActivityView.show()
         }
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.1) {
-            self.addHeatmap(from: "90toNow", withExt: "csv", country: self.currentPlace, year: year)
+            self.addHeatmap(from: "90toNow", withExt: "csv", countries: self.currentPlace, year: year, month: month+1)
         }
     }
     
@@ -227,12 +241,12 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
                 if let country = country {
                     print(country)
                     self.titleLabel.text = "Temperature in \(country)"
-                    self.currentPlace = country
+                    self.currentPlace = [country]
                     DispatchQueue.main.async {
                         ActivityView.show()
                     }
                     DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.1) {
-                        self.addHeatmap(from: "90toNow", withExt: "csv", country: country, year: 1990+Int(self.dateSlider.value))
+                        self.addHeatmap(from: "90toNow", withExt: "csv", countries: [country], year: 1990+Int(self.dateSlider.value), month: Int(self.dateSlider.value)%12+1)
                     }
                 }
             }
